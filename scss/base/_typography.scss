@@ -1,0 +1,29 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: $base60;
+}
+
+p {
+	@include text(.9em, 1.4, 300);
+}
+
+h1 {
+	@include text(1.4em, 1.2, 300);
+	letter-spacing: .01em;
+}
+
+h2 {
+	@include text(1.1em, 1.9, 400);
+	letter-spacing: .01em;
+}
+
+h3 {
+	@include text(.9em, 1.5, 400);
+	text-transform: uppercase;
+	letter-spacing: .03em;
+}
+
+a {
+	text-decoration: none;
+	color: $base60;
+}

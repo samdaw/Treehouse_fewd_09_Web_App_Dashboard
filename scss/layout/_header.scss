@@ -1,0 +1,66 @@
+/* HEADER */
+.header-main {
+    display: flex;
+    height: 75px;
+    background-color: $blue;
+    z-index: 10000000;
+    position: relative;
+    color: white;
+    width: 100%;
+    @extend %padding;
+    @include breakpoint(md) {
+        position: fixed;
+        top: 0;
+    }
+    h1 {
+    margin-right: auto;
+    align-self: center;
+        .tm {
+            vertical-align: top;
+            font-size: .55em;
+        }
+    }
+    
+    .header-right {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+
+        a {
+            align-self: center;
+            width: 41px;
+            height: 40px;
+            margin-right: 1em;
+            cursor: pointer;
+            background: url(#{$img}icon-bell.svg) no-repeat center center;
+            background-size: auto 20px;
+            @extend %animate;
+            &[data-state=active] {
+                background: url(#{$img}notification-active.svg) no-repeat top 6px right 6px, url(#{$img}icon-bell.svg) no-repeat center center;
+                background-size: 7px, auto 20px;
+            }
+        }
+
+        div {
+            display: flex;
+            padding-left: 1.3em;
+            border-left: 1px solid #82a4d0;
+            align-items: center;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        p {
+            display: none;
+            margin-left: 1.3em;
+            @include breakpoint(md) {
+                display: initial;
+            }
+        }   
+    }
+}
+

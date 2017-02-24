@@ -1,0 +1,27 @@
+%radius {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+%line {
+    border: .5px solid $line;
+    @extend %radius;
+}
+
+%padding {
+    padding: 0 24px;
+}
+
+%animate {
+    transition: all 0.2s linear;
+}
+
+%fade {
+    opacity: .85;
+    @extend %animate;
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}

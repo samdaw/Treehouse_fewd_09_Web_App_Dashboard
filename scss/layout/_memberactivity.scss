@@ -1,0 +1,49 @@
+/* MEMBER ACTIVITY */
+.member-container {
+    display: flex;
+    padding: 1em 0;
+    align-items: center;
+    @extend %fade;
+    @extend %animate;
+    border-bottom: $base10 .25px solid;
+    &:last-child {
+        border-bottom: initial;
+    }
+    &:hover,
+    &:focus {
+        background-color: $bg;
+    }
+
+    img {
+        margin-right: 1em;
+        border-radius: 50%;
+        width: 39px;
+        height: 39px;
+    }
+
+    p {
+        overflow: hidden;
+        margin: 0;
+        padding-right: 45px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    a {
+        display: flex;
+        width: 100%;
+        background: url(#{$img}right.svg) no-repeat right;
+        background-position: right 8px center;
+        @extend %animate;
+        &:hover,
+        &:focus {
+            background-position: right center;
+        }
+    }
+
+    span {
+        font-size: .9em;
+        color: $blue;
+        font-weight: 300;
+    }
+}

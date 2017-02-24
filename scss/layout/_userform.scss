@@ -1,0 +1,160 @@
+/* USER FORM INPUT */
+input,
+textarea,
+select,
+button,
+.error-message {
+    width: 100%;
+    padding: 9px;
+    outline: none;
+    font-weight: 100;
+    font-size: .9em;
+    background-color: $bg;
+    @extend %line;
+    @extend %animate;
+    &:focus {
+        border-color: $base30;
+    }
+    &[data-state=error] {
+        border-color: #e0a3b8;
+    }
+}
+
+select {
+    height: 3em;
+    color: $base40;
+    background: url(#{$img}down.svg) no-repeat right;
+    background-origin: content-box;   
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input[type=text],
+textarea,
+select,
+.error-message,
+button {
+    margin-bottom: 1em;
+}
+
+textarea {
+    height: 104px;
+    padding: 1em;
+    resize: none;
+}
+
+/* USER FORM BUTTON */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(sm) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @include breakpoint(md) {
+        flex-direction: column;
+    }
+    @include breakpoint(lg) {
+        flex-direction: row;
+    }
+    @include breakpoint(xxl) {
+        flex-direction: column;
+    }
+}
+
+button {
+    color: white;
+    background-color: $blue;
+    height: 3em;
+    border: none;
+    @extend %fade;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+#btn-cancel {
+    background-color: $base60;
+}
+
+
+.error-message,
+#btn-cancel {
+    @extend %animate;
+    @include breakpoint(sm) { margin-left: 1em; }
+    @include breakpoint(md) { margin-left: 0; }
+    @include breakpoint(lg) { margin-left: 1em; }
+    @include breakpoint(xxl) { margin-left: 0; }
+}
+
+/* ERROR MESSAGE */
+.error-message {
+    height: 3em;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    display: inline-block;
+    &[data-state=sent] {
+        border-color: #88c5c9;
+        background-color: #88c5c9;
+    }
+    &[data-state=error] {
+        background-color: #e0a3b8;
+    }
+}
+
+/* AND SWITCH  */ 
+.toggle-switch {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .switch {
+        position: relative;
+        display: block;
+        width: 66px;
+        height: 28px;
+        @extend %fade;
+
+        input {
+            display:none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $base20;
+            border-radius: 34px;
+            @extend %animate;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 3px;
+            bottom: 3px;
+            background-color: $white;
+            @extend %animate;
+        }
+
+        input:checked + .slider {
+            background-color: $blue;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(38px);
+            -ms-transform: translateX(38px);
+            transform: translateX(38px);
+        }
+
+        .slider:before {
+            border-radius: 50%;
+        }
+    }
+}

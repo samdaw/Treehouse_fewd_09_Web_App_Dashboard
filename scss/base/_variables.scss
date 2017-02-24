@@ -1,0 +1,21 @@
+$white		:	#fff;
+$base		:	#000;
+$blue		:	#7395c0;
+$navy		:	#4b5972;
+$neon		:	#7ee778;
+
+$bg			:	lighten($base, 98%);
+$base10		:	lighten($base, 90%);
+$line		:	lighten($base, 85%);
+$base20		:	lighten($base, 80%);
+$base25		:	lighten($base, 75%);
+$base30		:	lighten($base, 70%);
+$base40 	:	lighten($base, 60%);
+$base60	 	:	lighten($base, 40%);
+
+$brk-sm		:	34em;	//544px
+$brk-md		:	48em;	//768px
+$brk-lg 	:	62em;	//992px
+$brk-xl		:	75em;	//1200px
+$brk-xxl	:	95em;
+$img		:	'../img/';

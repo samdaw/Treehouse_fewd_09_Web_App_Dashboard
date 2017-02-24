@@ -1,0 +1,38 @@
+/* ALERT */
+.content-alert {
+    @extend %padding; 
+    @extend %fade;
+    margin: 24px 0;
+
+    .alert {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 14px 0;
+        color: $white;
+        background-color: $blue;
+        @extend %radius;
+
+        p {
+            font-size: .8em;
+            padding: 0px 20px;
+        }
+
+        strong {
+            margin-right: 1em;
+        }
+
+        button {
+        	text-indent: -99999px;
+        	padding-right: 40px;
+            width: 30px;
+            background: url(#{$img}close.svg) no-repeat center;
+            margin-bottom: 0;
+            &:hover,
+            &:focus {
+                transition: all .4s;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

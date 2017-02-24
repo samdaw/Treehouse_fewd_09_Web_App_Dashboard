@@ -1,0 +1,88 @@
+/*CONTAINER*/
+.container {
+    margin-bottom: 80px;
+    @include breakpoint(md) {
+        margin-top: 75px;
+        position: relative;
+        left: 78px;
+        width: calc(100% - 78px);
+    }
+}
+
+/* WIDGET*/
+.widget-container {
+    border: .25px solid $line;
+    border-bottom: 0;
+    border-right: 0;
+    overflow: hidden;
+    padding: 24px 24px 48px 24px;
+
+    h3 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: .5em;
+        @include breakpoint(sm) {
+            flex-direction: row;
+        }
+    }
+}
+
+.traffic {
+    border-top: none;
+}
+
+.full-width {
+    clear: both;
+    width: 100%;
+}
+
+.half-width {
+    @include breakpoint(md) {
+        float: left;
+        width: 50%;
+    }
+}
+
+.quater-width {
+    @include breakpoint(xxl) {
+        float: left;
+        width: 25%;
+    }
+}
+
+.traffic-switch {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    a {
+        font-size: .8rem;
+        font-weight: 700;
+        padding: 6px 11px;
+        margin: 6px;
+        cursor: pointer;
+        @extend %fade;
+        @include breakpoint(sm) {
+            margin-right: 0px;
+            padding: 5px 9px;
+        }
+        &[data-state=active] {
+            opacity: 1;
+            text-align: center;
+            border-radius: 15px;
+            color: white;
+            background-color: $neon;
+        }
+    }
+}
