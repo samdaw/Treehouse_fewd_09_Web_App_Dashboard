@@ -1,5 +1,5 @@
 const removeButton = document.querySelector('.content-alert');
-const traffic = document.getElementById('traffic');
+const weeklyTraffic = document.getElementById('traffic');
 const dailyTraffic = document.getElementById('daily-traffic');
 const mobileUsers = document.getElementById('mobile-users');
 
@@ -87,7 +87,7 @@ Chart.defaults.global.maintainAspectRatio = true;
 Chart.defaults.global.responsive = true;
 Chart.defaults.global.animation.duration = 1500;
 
-const chartTraffic = new Chart(traffic, {
+const chartTraffic = new Chart(weeklyTraffic, {
     type: 'line',
     data: {
         labels: trafficLabel,
@@ -253,3 +253,4 @@ MemberArea.prototype.renderInElement = function(container, html) {
 
 var memberArea = new MemberArea();
 memberArea.displayAll();
+
