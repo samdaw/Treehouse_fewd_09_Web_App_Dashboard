@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+ 	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>SocialSimple &mdash; Jane Doe</title>
+	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+	    <link rel="icon" type="image/x-icon" href="img/favicon.jpg"/>
+	    <link rel="stylesheet" href="css/application.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+
+ 	</head>
+	<body>
+		<header class="header-main" role="banner">
+            <h1><strong>Social</strong>Simple<span class="tm">&trade;</span></h1>
+            <div class="header-right">
+            	<a href="#" data-state="active"></a>
+            	<div>
+            	    <img src="img/profile.jpg" alt="Profile picture" class="profile-image">
+            	    <p>Jane Doe</p>
+            	</div>  
+            </div>
+        </header>
+	    <nav class="nav-main" role="navigation">
+	        <ul>
+	            <li><a href="#" id="btn-dash" data-state="active">DASHBOARD</a></li>
+	            <li><a href="#" id="btn-profile" data-state="inactive">PROFILE</a></li>
+	            <li><a href="#" id="btn-traffic" data-state="inactive">TRAFFIC</a></li>
+	            <li><a href="#" id="btn-settings" data-state="inactive">SETTINGS</a></li>
+	        </ul>
+	    </nav>
+		<main class="container">
+<!-- SEARCH -->
+			<header id="content-header">
+			    <h2>Dashboard</h2>
+			    <div id="content-search">
+			    	<input id="search" name="search" placeholder="Search" type="text">
+			    </div>
+			</header>
+<!-- ALERT -->
+			<div class="content-alert">
+		        <div class="alert">
+		            <p><strong>Alert</strong>We use cookies on this website to make your browsing experience better</p>
+		            <button class="close-button">Close alert</button>
+		        </div>
+		        <div class="alert">
+		            <p><strong>Alert</strong>To keep your account safe you should update your password</p>
+		            <button class="close-button">Close alert</button>
+		        </div>
+		     </div>
+<!-- TRAFFIC -->
+            <div class="widget-container full-width traffic">
+                <header class="traffic-switch">
+                	<h3 >Traffic</h3>
+                    <ul>
+                        <li><a href="#" id="hourly" data-state="inactive">Hourly</a></li>
+                        <li><a href="#" id="daily" data-state="inactive">Daily</a></li>
+                        <li><a href="#" id="weekly" data-state="active">Weekly</a></li>
+                        <li><a href="#" id="monthly" data-state="inactive">Monthly</a></li>
+                    </ul>
+                </header>
+                <canvas id="traffic"></canvas>
+            </div>
+<!-- DAILY TRAFFIC -->
+            <div class="widget-container half-width">
+                <header><h3>Daily traffic</h3></header>
+                <canvas id="daily-traffic" height="160"></canvas>
+            </div>
+<!-- MOBILE TRAFFIC -->
+            <div class="widget-container half-width">
+                <header><h3>Mobile Users</h3></header>
+                <canvas id="mobile-users" height="160"></canvas>
+            </div>
+<!-- SOCIAL -->
+	        <div class="widget-container full-width">
+	            <header><h3>Social stats</h3></header>
+	            <ul class="social-stats">
+	                <li>
+	                	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M64.41 45.84q0-.82-.07-2.21a18.23 18.23 0 0 0-.23-2.35 9.24 9.24 0 0 0-.42-1.63 6 6 0 0 0-3.34-3.34 9.24 9.24 0 0 0-1.63-.42 18.22 18.22 0 0 0-2.35-.23l-2.21-.07h-8.32l-2.21.07a18.17 18.17 0 0 0-2.35.23 9.18 9.18 0 0 0-1.63.42 6 6 0 0 0-3.34 3.34 9.12 9.12 0 0 0-.42 1.63 18 18 0 0 0-.23 2.35q-.06 1.38-.07 2.21t0 2.41v5.91l.07 2.21a17.93 17.93 0 0 0 .23 2.35 9.05 9.05 0 0 0 .42 1.63 6 6 0 0 0 3.34 3.34 9.05 9.05 0 0 0 1.63.42 17.93 17.93 0 0 0 2.35.23l2.21.07h8.32l2.21-.07a18 18 0 0 0 2.35-.23 9.12 9.12 0 0 0 1.63-.42 6 6 0 0 0 3.34-3.34 9.18 9.18 0 0 0 .42-1.63 18.17 18.17 0 0 0 .23-2.35q.06-1.38.07-2.21t0-2.41v-3.5q.02-1.59 0-2.41zm-8 10.54a9 9 0 0 1-12.79-12.76 9 9 0 0 1 12.76 12.76zm4.48-14.27a2.1 2.1 0 1 1 .62-1.49 2 2 0 0 1-.65 1.49z"/><path d="M50 44.15a5.85 5.85 0 1 0 4.14 1.71A5.64 5.64 0 0 0 50 44.15z"/><path d="M50 5a45 45 0 1 0 45 45A45 45 0 0 0 50 5zm17.44 52.25a10.73 10.73 0 0 1-2.83 7.36 10.73 10.73 0 0 1-7.36 2.83q-2 .11-7.25.11t-7.25-.11a10.73 10.73 0 0 1-7.36-2.83 10.72 10.72 0 0 1-2.83-7.36q-.12-2-.11-7.25t.11-7.25a10.72 10.72 0 0 1 2.83-7.36 10.73 10.73 0 0 1 7.36-2.83q2-.11 7.25-.11t7.25.11a10.73 10.73 0 0 1 7.36 2.83 10.73 10.73 0 0 1 2.83 7.36q.11 2 .11 7.25t-.11 7.25z"/></svg>
+	                	<p>Instagram<span>16,368</span></p>
+	                </li>
+	                <li>
+	                	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 5a45 45 0 1 0 45 45A45 45 0 0 0 50 5zm9.88 32.29h-3.59a3.36 3.36 0 0 0-2.65.82 3.79 3.79 0 0 0-.69 2.47v4.32h6.7l-.89 6.77h-5.81V69H46V51.67h-5.88V44.9H46v-5a8.84 8.84 0 0 1 2.38-6.6 8.63 8.63 0 0 1 6.28-2.3 37.83 37.83 0 0 1 5.21.27z"/></svg>
+	                	<p>Facebook<span>15,345</span></p>
+	                </li>
+	                <li>
+	                	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 5a45 45 0 1 0 45 45A45 45 0 0 0 50 5zm14.31 37.66v1a21 21 0 0 1-.87 5.93 21.48 21.48 0 0 1-2.64 5.68A22.34 22.34 0 0 1 56.61 60a18.79 18.79 0 0 1-5.9 3.34 21.57 21.57 0 0 1-7.38 1.25A20.5 20.5 0 0 1 32 61.32a15.68 15.68 0 0 0 1.78.09 14.46 14.46 0 0 0 9.17-3.16A7.4 7.4 0 0 1 36 53.13a9.23 9.23 0 0 0 1.39.11 7.6 7.6 0 0 0 1.98-.24 7.26 7.26 0 0 1-4.24-2.55 7.13 7.13 0 0 1-1.68-4.7v-.09a7.31 7.31 0 0 0 3.34.94 7.36 7.36 0 0 1-2.4-2.6 7.4 7.4 0 0 1 .11-7.25 20.89 20.89 0 0 0 6.73 5.45 20.55 20.55 0 0 0 8.49 2.27 8.14 8.14 0 0 1-.18-1.69 7.39 7.39 0 0 1 12.78-5.08A14.49 14.49 0 0 0 67 35.92 7.17 7.17 0 0 1 63.76 40 14.67 14.67 0 0 0 68 38.84a15.47 15.47 0 0 1-3.69 3.82z"/></svg>
+	                	<p>Twitter<span>14,739</span></p>
+	                </li>
+	                <li>
+	                	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M57.63 48.84l-11-6.9a1.3 1.3 0 0 0-1.4 0 1.28 1.28 0 0 0-.71 1.21V56.9a1.28 1.28 0 0 0 .71 1.21 1.48 1.48 0 0 0 .67.17 1.23 1.23 0 0 0 .73-.22l11-6.9a1.37 1.37 0 0 0 0-2.33z"/><path d="M50 5a45 45 0 1 0 45 45A45 45 0 0 0 50 5zm19.29 48.23q0 1.16-.18 2.94a23.83 23.83 0 0 1-.49 3.18A5 5 0 0 1 67.14 62a4.54 4.54 0 0 1-2.67 1.25A141.22 141.22 0 0 1 50 63.8a141.2 141.2 0 0 1-14.47-.54A4.58 4.58 0 0 1 32.85 62a5 5 0 0 1-1.5-2.65 26.5 26.5 0 0 1-.46-3.18q-.16-1.78-.18-2.94t0-3.23q0-2.07 0-3.23t.18-2.94a23.86 23.86 0 0 1 .49-3.18A5 5 0 0 1 32.86 38a4.55 4.55 0 0 1 2.67-1.25A141.59 141.59 0 0 1 50 36.2a141.61 141.61 0 0 1 14.47.54A4.61 4.61 0 0 1 67.15 38a5 5 0 0 1 1.5 2.65 26.82 26.82 0 0 1 .46 3.18q.16 1.78.18 2.94t0 3.23 0 3.23z"/></svg>
+	                	<p>YouTube<span>12,467</span></p>
+	                </li>
+	                <li>
+	                	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 5a45 45 0 1 0 45 45A45 45 0 0 0 50 5zm-8.07 57.88h-7.14V41.44h7.14zm-.63-25.42a4.08 4.08 0 0 1-2.93 1.06 3.9 3.9 0 0 1-2.86-1.06 3.54 3.54 0 0 1-1.08-2.64 3.48 3.48 0 0 1 1.11-2.65 4.07 4.07 0 0 1 2.91-1 4 4 0 0 1 2.88 1 3.61 3.61 0 0 1 1.1 2.65 3.43 3.43 0 0 1-1.13 2.64zm26.32 25.42H60.5V51.41a6.26 6.26 0 0 0-.88-3.56 3.08 3.08 0 0 0-2.74-1.29 3.5 3.5 0 0 0-2.28.75 4.59 4.59 0 0 0-1.37 1.85 5.21 5.21 0 0 0-.23 1.76v12h-7.13v-21.4H53v3.05a9.35 9.35 0 0 1 .84-1.15 9.23 9.23 0 0 1 1.22-1.13 5.64 5.64 0 0 1 1.88-.94 8.59 8.59 0 0 1 2.48-.34 7.69 7.69 0 0 1 6 2.46q2.25 2.46 2.25 7.19z"/></svg>
+	                	<p>LinkedIn<span>10,890</span></p>
+					</li>
+	                <li>
+	                	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M57.63 48.84l-11-6.9a1.3 1.3 0 0 0-1.4 0 1.28 1.28 0 0 0-.71 1.21V56.9a1.28 1.28 0 0 0 .71 1.21 1.48 1.48 0 0 0 .67.17 1.23 1.23 0 0 0 .73-.22l11-6.9a1.37 1.37 0 0 0 0-2.33z"/><path d="M50 5a45 45 0 1 0 45 45A45 45 0 0 0 50 5zm19.29 48.23q0 1.16-.18 2.94a23.83 23.83 0 0 1-.49 3.18A5 5 0 0 1 67.14 62a4.54 4.54 0 0 1-2.67 1.25A141.22 141.22 0 0 1 50 63.8a141.2 141.2 0 0 1-14.47-.54A4.58 4.58 0 0 1 32.85 62a5 5 0 0 1-1.5-2.65 26.5 26.5 0 0 1-.46-3.18q-.16-1.78-.18-2.94t0-3.23q0-2.07 0-3.23t.18-2.94a23.86 23.86 0 0 1 .49-3.18A5 5 0 0 1 32.86 38a4.55 4.55 0 0 1 2.67-1.25A141.59 141.59 0 0 1 50 36.2a141.61 141.61 0 0 1 14.47.54A4.61 4.61 0 0 1 67.15 38a5 5 0 0 1 1.5 2.65 26.82 26.82 0 0 1 .46 3.18q.16 1.78.18 2.94t0 3.23 0 3.23z"/></svg>
+	                	<p>Google+<span>10,993</span></p>
+	                </li>
+	            </ul>
+	        </div>
+
+<!-- NEW MEMBER -->
+		    <div class="widget-container half-width quater-width">
+		        <header><h3>New Members</h3></header>
+		        <ul id="user-list"></ul>
+		    </div>
+
+<!-- RECENT ACTIVITY -->
+		    <div class="widget-container half-width quater-width">
+		        <header><h3>Recent Activity</h3></header>
+		        <ul id="user-activity"></ul>
+		    </div>
+
+<!-- MESSAGE -->
+		    <div class="widget-container half-width quater-width">
+		        <header><h3>Message user</h3></header>
+			    <form action="#" id="message-form">
+                    <input type="text" placeholder="Search for User" autocomplete="off" required>
+                    <textarea placeholder="Message for User" required></textarea>
+                    <div id="message-btn-container" class="btn-container">
+                    	<button type="submit" id="send-message">Send</button>
+                    </div>
+                </form>
+			</div>
+
+<!-- SETTINGS -->
+		    <div class="widget-container half-width quater-width">
+		        <header><h3>Settings</h3></header>
+		        <form action="#" id="settings-form">
+		            <div class="toggle-switch">
+		            <p>Send Email Notifications</p>
+		                <label class="switch">
+		                    <input type="checkbox" checked>
+		                     <span class="slider"></span>
+		                </label>
+		            </div>
+		            <div class="toggle-switch">
+		            <p>Set Profile to Public</p>
+		                <label class="switch">
+		                    <input type="checkbox" checked>
+		                     <span class="slider"></span>
+		                </label>
+		            </div>
+		            <select id="form-timezone" title="Please select timezone">
+                		<option value="Hawaii">(GMT-10:00) Hawaii</option>
+                		<option value="Alaska">(GMT-09:00) Alaska</option>
+                		<option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                		<option value="Arizona">(GMT-07:00) Arizona</option>
+                		<option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                		<option value="Central Time (US &amp; Canada)">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                		<option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                		<option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                		<option value="International Date Line West">(GMT-11:00) International Date Line West</option>
+                		<option value="Midway Island">(GMT-11:00) Midway Island</option>
+                		<option value="Samoa">(GMT-11:00) Samoa</option>
+                		<option value="Tijuana">(GMT-08:00) Tijuana</option>
+                		<option value="Chihuahua">(GMT-07:00) Chihuahua</option>
+                		<option value="Mazatlan">(GMT-07:00) Mazatlan</option>
+                		<option value="Central America">(GMT-06:00) Central America</option>
+                		<option value="Guadalajara">(GMT-06:00) Guadalajara</option>
+                		<option value="Mexico City">(GMT-06:00) Mexico City</option>
+                		<option value="Monterrey">(GMT-06:00) Monterrey</option>
+                		<option value="Saskatchewan">(GMT-06:00) Saskatchewan</option>
+                		<option value="Bogota">(GMT-05:00) Bogota</option>
+                		<option value="Lima">(GMT-05:00) Lima</option>
+                		<option value="Quito">(GMT-05:00) Quito</option>
+                		<option value="Caracas">(GMT-04:30) Caracas</option>
+                		<option value="Atlantic Time (Canada)">(GMT-04:00) Atlantic Time (Canada)</option>
+                		<option value="La Paz">(GMT-04:00) La Paz</option>
+                		<option value="Santiago">(GMT-04:00) Santiago</option>
+                		<option value="Newfoundland">(GMT-03:30) Newfoundland</option>
+                		<option value="Brasilia">(GMT-03:00) Brasilia</option>
+                		<option value="Buenos Aires">(GMT-03:00) Buenos Aires</option>
+                		<option value="Georgetown">(GMT-03:00) Georgetown</option>
+                		<option value="Greenland">(GMT-03:00) Greenland</option>
+                		<option value="Mid-Atlantic">(GMT-02:00) Mid-Atlantic</option>
+                		<option value="Azores">(GMT-01:00) Azores</option>
+                		<option value="Cape Verde Is.">(GMT-01:00) Cape Verde Is.</option>
+                		<option value="Casablanca">(GMT) Casablanca</option>
+                		<option value="Dublin">(GMT) Dublin</option>
+                		<option value="Edinburgh">(GMT) Edinburgh</option>
+                		<option value="Lisbon">(GMT) Lisbon</option>
+                		<option selected="selected" value="London">(GMT) London</option>
+                		<option value="Monrovia">(GMT) Monrovia</option>
+                		<option value="Amsterdam">(GMT+01:00) Amsterdam</option>
+                		<option value="Belgrade">(GMT+01:00) Belgrade</option>
+                		<option value="Berlin">(GMT+01:00) Berlin</option>
+                		<option value="Bern">(GMT+01:00) Bern</option>
+                		<option value="Bratislava">(GMT+01:00) Bratislava</option>
+                		<option value="Brussels">(GMT+01:00) Brussels</option>
+                		<option value="Budapest">(GMT+01:00) Budapest</option>
+                		<option value="Copenhagen">(GMT+01:00) Copenhagen</option>
+                		<option value="Ljubljana">(GMT+01:00) Ljubljana</option>
+                		<option value="Madrid">(GMT+01:00) Madrid</option>
+                		<option value="Paris">(GMT+01:00) Paris</option>
+                		<option value="Prague">(GMT+01:00) Prague</option>
+                		<option value="Rome">(GMT+01:00) Rome</option>
+                		<option value="Sarajevo">(GMT+01:00) Sarajevo</option>
+                		<option value="Skopje">(GMT+01:00) Skopje</option>
+                		<option value="Stockholm">(GMT+01:00) Stockholm</option>
+                		<option value="Vienna">(GMT+01:00) Vienna</option>
+                		<option value="Warsaw">(GMT+01:00) Warsaw</option>
+                		<option value="West Central Africa">(GMT+01:00) West Central Africa</option>
+                		<option value="Zagreb">(GMT+01:00) Zagreb</option>
+                		<option value="Athens">(GMT+02:00) Athens</option>
+                		<option value="Bucharest">(GMT+02:00) Bucharest</option>
+                		<option value="Cairo">(GMT+02:00) Cairo</option>
+                		<option value="Harare">(GMT+02:00) Harare</option>
+                		<option value="Helsinki">(GMT+02:00) Helsinki</option>
+                		<option value="Istanbul">(GMT+02:00) Istanbul</option>
+                		<option value="Jerusalem">(GMT+02:00) Jerusalem</option>
+                		<option value="Kyiv">(GMT+02:00) Kyiv</option>
+                		<option value="Minsk">(GMT+02:00) Minsk</option>
+                		<option value="Pretoria">(GMT+02:00) Pretoria</option>
+                		<option value="Riga">(GMT+02:00) Riga</option>
+                		<option value="Sofia">(GMT+02:00) Sofia</option>
+                		<option value="Tallinn">(GMT+02:00) Tallinn</option>
+                		<option value="Vilnius">(GMT+02:00) Vilnius</option>
+                		<option value="Baghdad">(GMT+03:00) Baghdad</option>
+                		<option value="Kuwait">(GMT+03:00) Kuwait</option>
+                		<option value="Moscow">(GMT+03:00) Moscow</option>
+                		<option value="Nairobi">(GMT+03:00) Nairobi</option>
+                		<option value="Riyadh">(GMT+03:00) Riyadh</option>
+                		<option value="St. Petersburg">(GMT+03:00) St. Petersburg</option>
+                		<option value="Volgograd">(GMT+03:00) Volgograd</option>
+                		<option value="Tehran">(GMT+03:30) Tehran</option>
+                		<option value="Abu Dhabi">(GMT+04:00) Abu Dhabi</option>
+                		<option value="Baku">(GMT+04:00) Baku</option>
+                		<option value="Muscat">(GMT+04:00) Muscat</option>
+                		<option value="Tbilisi">(GMT+04:00) Tbilisi</option>
+                		<option value="Yerevan">(GMT+04:00) Yerevan</option>
+                		<option value="Kabul">(GMT+04:30) Kabul</option>
+                		<option value="Ekaterinburg">(GMT+05:00) Ekaterinburg</option>
+                		<option value="Islamabad">(GMT+05:00) Islamabad</option>
+                		<option value="Karachi">(GMT+05:00) Karachi</option>
+                		<option value="Tashkent">(GMT+05:00) Tashkent</option>
+                		<option value="Chennai">(GMT+05:30) Chennai</option>
+                		<option value="Kolkata">(GMT+05:30) Kolkata</option>
+                		<option value="Mumbai">(GMT+05:30) Mumbai</option>
+                		<option value="New Delhi">(GMT+05:30) New Delhi</option>
+                		<option value="Kathmandu">(GMT+05:45) Kathmandu</option>
+                		<option value="Almaty">(GMT+06:00) Almaty</option>
+                		<option value="Astana">(GMT+06:00) Astana</option>
+                		<option value="Dhaka">(GMT+06:00) Dhaka</option>
+                		<option value="Novosibirsk">(GMT+06:00) Novosibirsk</option>
+                		<option value="Sri Jayawardenepura">(GMT+06:00) Sri Jayawardenepura</option>
+                		<option value="Rangoon">(GMT+06:30) Rangoon</option>
+                		<option value="Bangkok">(GMT+07:00) Bangkok</option>
+                		<option value="Hanoi">(GMT+07:00) Hanoi</option>
+                		<option value="Jakarta">(GMT+07:00) Jakarta</option>
+                		<option value="Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option>
+                		<option value="Beijing">(GMT+08:00) Beijing</option>
+                		<option value="Chongqing">(GMT+08:00) Chongqing</option>
+                		<option value="Hong Kong">(GMT+08:00) Hong Kong</option>
+                		<option value="Irkutsk">(GMT+08:00) Irkutsk</option>
+                		<option value="Kuala Lumpur">(GMT+08:00) Kuala Lumpur</option>
+                		<option value="Perth">(GMT+08:00) Perth</option>
+                		<option value="Singapore">(GMT+08:00) Singapore</option>
+                		<option value="Taipei">(GMT+08:00) Taipei</option>
+                		<option value="Ulaan Bataar">(GMT+08:00) Ulaan Bataar</option>
+                		<option value="Urumqi">(GMT+08:00) Urumqi</option>
+                		<option value="Osaka">(GMT+09:00) Osaka</option>
+                		<option value="Sapporo">(GMT+09:00) Sapporo</option>
+                		<option value="Seoul">(GMT+09:00) Seoul</option>
+                		<option value="Tokyo">(GMT+09:00) Tokyo</option>
+                		<option value="Yakutsk">(GMT+09:00) Yakutsk</option>
+                		<option value="Adelaide">(GMT+09:30) Adelaide</option>
+                		<option value="Darwin">(GMT+09:30) Darwin</option>
+                		<option value="Brisbane">(GMT+10:00) Brisbane</option>
+                		<option value="Canberra">(GMT+10:00) Canberra</option>
+                		<option value="Guam">(GMT+10:00) Guam</option>
+                		<option value="Hobart">(GMT+10:00) Hobart</option>
+                		<option value="Melbourne">(GMT+10:00) Melbourne</option>
+                		<option value="Port Moresby">(GMT+10:00) Port Moresby</option>
+                		<option value="Sydney">(GMT+10:00) Sydney</option>
+                		<option value="Vladivostok">(GMT+10:00) Vladivostok</option>
+                		<option value="Magadan">(GMT+11:00) Magadan</option>
+                		<option value="New Caledonia">(GMT+11:00) New Caledonia</option>
+                		<option value="Solomon Is.">(GMT+11:00) Solomon Is.</option>
+                		<option value="Auckland">(GMT+12:00) Auckland</option>
+                		<option value="Fiji">(GMT+12:00) Fiji</option>
+                		<option value="Kamchatka">(GMT+12:00) Kamchatka</option>
+                		<option value="Marshall Is.">(GMT+12:00) Marshall Is.</option>
+                		<option value="Wellington">(GMT+12:00) Wellington</option>
+                		<option value="Nuku'alofa">(GMT+13:00) Nuku'alofa</option>
+	                </select>
+	                <div class="btn-container">
+			            <button id="btn-save">Save</button>
+			            <button id="btn-cancel">Cancel</button>
+			        </div>
+		        </form>
+		    </div>
+<!-- END -->
+		</main>
+	<script src="js/app.js"></script>
+	</body>
+</html>
