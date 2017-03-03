@@ -1,5 +1,5 @@
-#	Project 09
-	Web App Dashboard
+Project 09
+Web App Dashboard
 	
 Web app dashboard complete with JavaScript-driven charts and graphs. No backend or database functionality.
 
